@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Baza ankietowanych{% endblock %}
+
+{% block content %}
+<h1>Baza ankietowanych</h1>
+{% for case in listOfPeople %}
+    <h4>
+        {{case.id, case.name, case.surname, case.pesel, case.symptoms, case.lengthOfIlness,case.medicine, case.flights, case.hospitalisation}}
+    </h4>    
+{% endfor %}
+<h3><i>Ilość hospitalizowanych:</i></h3>
+<h4><i>{{number}}</i></h4>
+{% endblock %}
